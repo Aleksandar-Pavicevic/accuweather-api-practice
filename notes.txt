@@ -1,0 +1,12 @@
+DONE input letter
+DONE event listener calls locationkey api
+DONE locationkey api returns array of items
+DONE access specific values
+
+display those results in separate dom elements
+    each element:
+    of <type>
+    append to parent element
+    add event listener
+    on click call api for results
+return results
