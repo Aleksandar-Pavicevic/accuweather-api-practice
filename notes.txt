@@ -10,3 +10,39 @@ display those results in separate dom elements
     add event listener
     on click call api for results
 return results
+
+<input type="text">
+<ul>
+	<li>lig</li>
+	<li>ma</li>
+	<li>balls</li>
+	<li>go</li>
+	<li>back</li>
+	<li>zimbabwe</li>
+  </ul>
+
+* {
+	transition: 30s;
+/* 	transform: rotate(72000deg); */
+/* 	filter: hue-rotate(72000deg); */
+}
+li {
+	background: pink;
+}
+input {
+	background: yellow;
+}
+
+input = document.querySelector('input')
+
+u = document.querySelector('ul')
+let li = u.querySelectorAll('li')
+
+for (i = 0; i < li.length; i++) {
+	li[i].addEventListener('click', (e) => {
+		input.value = e.target.textContent
+		// input.value = li[i].textContent;
+	});
+}
+jira
+slack

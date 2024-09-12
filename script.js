@@ -1,4 +1,4 @@
-let apikey = "3RATeANI8MOjRBf73OfarEcvCjUzA96Z";
+let apikey = "iaJUuvAXKYDljjhGs7gAv0d8eFAoNgm9";
 let relevantResults = [];
 let outputList = document.querySelector("#location-keys");
 
@@ -17,12 +17,12 @@ input.addEventListener("input", (e) => {
     .then((data) => {
       relevantResults = [];
       outputList.innerHTML = "";
-      for (const city in data) {
-        relevantResults.push(`${data[city].LocalizedName}, ${data[city].Country.ID}`);
+      for (let i = 0; i < data.length; i++) {
+        relevantResults.push([data[i].LocalizedName, data[i].Country.ID]);
       }
       relevantResults.forEach((item) => {
         let li = document.createElement("li");
-        li.innerText = item;
+        li.innerText = item[0];
         outputList.appendChild(li);
       });
       // fetch(`http://dataservice.accuweather.com/locations/v1/${locationKey}?apikey=${apikey}`)
